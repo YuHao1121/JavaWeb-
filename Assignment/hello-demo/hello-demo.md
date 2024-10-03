@@ -5,20 +5,30 @@
 ### 安装maven：
 
 - 1.解压apache-maven-3.9.9-bin.zip
-- 2.配置本地仓库：修改conf/settings.xml中的\<localRepository\>为一个指定目录:\<localRepository\>D:professionalsoftwaremavenapache-maven-3.9.9mvn*repo\</localRepository\>*
-- 3.配置阿里云私服：修改conf/settings.xml中的\<mirrors\>标签，为其添加如下子标签：\<mirror\>\<id\>alimaven\</id\>
 
-    \<name\>aliyun maven\</name\>     \<url\>[http://maven.aliyun.com/nexus/content/groups/public/](http://maven.aliyun.com/nexus/content/groups/public/)\</url\>
+- 2.配置本地仓库：修改conf/settings.xml中的\<localRepository\>为一个指定目录:
 
-    \<mirrorOf\>central\</mirrorOf\>
+  ```xml
+  <localRepository>D:\professionalsoftware\maven\apache-maven-3.9.9\mvn_repo\</localRepository>
+  ```
 
-    \</mirror\>
+  
+
+- 3.配置阿里云私服：修改conf/settings.xml中的\<mirrors\>标签，为其添加如下子标签：
+
+  ```xml
+  <mirror><id>alimaven\</id>
+  	<name>aliyun maven\</name>     
+      <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+  	<mirrorOf>central</mirrorOf>
+  </mirror>
+  ```
+
+  
 
 - 4.配置环境变量：
-    - 在系统变量中新建一个MAVEN*HOME变量，设置变量名跟变量值*
-    - 将MAVEN*HOME配置到系统环境变量path中*
-
-　　　双击path变量，新建一参数，输入%MAVEN*HOME%**bin后点击确定即可。*
+    - 在系统变量中新建一个MAVEN_HOME变量，设置变量名跟变量值
+    - 将MAVEN_HOME配置到系统环境变量path中,双击path变量，新建一参数，输入%MAVEN_HOME%\bin后点击确定即可。
 
 - 5.验证：在cmd中输入命令 mvn -v显示如下则成功：![](575e0bececfe4d569013e459eebb846d.jpg)
 
@@ -41,7 +51,11 @@
 ![](8acf2499b61243d7be5fa4875bf3b803.jpg)
 
 - 2.解压并配置环境变量
-- ![](bd024f6e28724647bf6514c77c37d449.jpg)
+
+![](bd024f6e28724647bf6514c77c37d449.jpg)
+
+
+
 - 3.启动服务：![](0e2cc4a2280b48c3baad635feb4dc7dd.jpg)
 
     
